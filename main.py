@@ -3,7 +3,7 @@ import pandas
 import random
 
 BACKGROUND_COLOR = "#B1DDC6"
-data = pandas.read_csv("data/first_500_german_english_words_from_excel.csv") # words_to_learn.csv
+data = pandas.read_csv("data/first_500_german_english_words_from_excel.csv") # words_to_learn.csv index=False Error Handling
 to_learn = data.to_dict(orient="records")
 
 current_card = {}
