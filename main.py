@@ -3,7 +3,7 @@ import pandas
 import random
 
 BACKGROUND_COLOR = "#B1DDC6"
-data = pandas.read_csv("data/first_500_german_english_words_from_excel.csv")
+data = pandas.read_csv("data/first_500_german_english_words_from_excel.csv") # words_to_learn.csv
 to_learn = data.to_dict(orient="records")
 
 current_card = {}
@@ -27,6 +27,8 @@ def flip_card():
 def is_known():
     to_learn.remove(current_card)
     next_card()
+    # data = pandas.DataFrame(to_learn)
+    # data.to_csv("data/words_to_learn.csv")
 
 # UI setup
 
